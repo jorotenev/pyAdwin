@@ -8,5 +8,5 @@ data_stream.extend([2] * 15)
 
 for data in data_stream:
     if (adwin.update(data)):
-        print "Change has been detected in data: " + str(data)
-    print adwin.getEstimation()  # Prints the next value of the estimated form of data_stream
+        print("Change has been detected in data: " + str(data))
+    print(adwin.getEstimation())  # Prints the next value of the estimated form of data_stream

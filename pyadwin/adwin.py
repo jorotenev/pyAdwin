@@ -34,15 +34,15 @@ class Adwin(object):
     def printInfo(self):
         it = self.bucketList.tail
         if it is None:
-            print "It None"
+            print("It None")
 
         i = self.lastBucketRow
 
         while True:
             for k in range(it.size - 1, -1, -1):
-                print str(i) + " [" + str(it.sum[k]) + " de " + str(self.bucketSize(i)) + "],",
+                print(str(i) + " [" + str(it.sum[k]) + " de " + str(self.bucketSize(i)) + "],")
 
-            print
+            print()
             it = it.prev
             i -= 1
             if it is None:
@@ -143,7 +143,7 @@ class Adwin(object):
         self.sum -= node.sum[0]
         u1 = node.sum[0] / n1
         incVariance = float(node.variance[0] + n1 * self.W * (u1 - self.sum / self.W) * (u1 - self.sum / self.W)) / (
-        float(n1 + self.W))
+            float(n1 + self.W))
         self.var -= incVariance
         node.dropFront()
         self.bucketNumber -= 1
